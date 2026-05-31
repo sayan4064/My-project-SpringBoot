@@ -24,9 +24,7 @@
 
 <body>
 
-<!--================ Start Header Area =================-->
-	<%@ include file="header.jsp" %>
-	<!--================ End Header Area =================-->
+
 
     <!--================ Start Banner Area =================-->
     <section class="banner_area">
