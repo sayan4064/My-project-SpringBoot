@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!doctype html>
 <html lang="en">
 
@@ -34,6 +34,7 @@
             <div class="container">
                 <div class="banner_content text-center">
                     <h2>Contact Us</h2>
+                    <h4> ${message} </h4>
                     <div class="page_link">
                         <a href="index.html">Home</a>
                         <a href="contact.html">Contact</a>
@@ -52,23 +53,31 @@
                     <div class="contact_info">
                         <div class="info_item">
                             <i class="lnr lnr-home"></i>
-                            <h6>California, United States</h6>
-                            <p>Santa monica bullevard</p>
+                            <h6>West Bengal,India</h6>
+                            <p> </p>
                         </div>
                         <div class="info_item">
                             <i class="lnr lnr-phone-handset"></i>
-                            <h6><a href="#">00 (440) 9865 562</a></h6>
+                            <h6><a href="#">+91 938234064</a></h6>
                             <p>Mon to Fri 9am to 6 pm</p>
                         </div>
                         <div class="info_item">
                             <i class="lnr lnr-envelope"></i>
-                            <h6><a href="#">support@colorlib.com</a></h6>
+                            <h6><a href="#">sayanmetya222@gmail.com</a></h6>
                             <p>Send us your query anytime!</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-9">
-                    <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+
+                  <c:if test="${not empty errors}">
+                        <div class="alert alert-danger">
+                            <c:forEach items="${errors}" var="error">
+                                <p>${error.defaultMessage}</p>
+                            </c:forEach>
+                        </div>
+                    </c:if>
+                    <form action ="${pageContext.request.contextPath}/client/saveContact" method="post" class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                         <div class="col-md-6">
                             <div class="form-group">
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">

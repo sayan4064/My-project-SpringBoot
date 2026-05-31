@@ -36,11 +36,11 @@
 					<div class="col-lg-7">
 						<div class="banner_content">
 							<h3 class="text-uppercase">Hell0</h3>
-							<h1 class="text-uppercase">I am rahi satner</h1>
-							<h5 class="text-uppercase">senior wordpress developer</h5>
+							<h1 class="text-uppercase">I am sayan metya</h1>
+							<h5 class="text-uppercase">java backend developer</h5>
 							<div class="d-flex align-items-center">
 								<a class="primary_btn" href="contact.jsp"><span>Hire Me</span></a>
-								<a class="primary_btn tr-bg" href="#"><span>Get CV</span></a>
+								<a class="primary_btn tr-bg" href="#"><span>Get Resume</span></a>
 							</div>
 						</div>
 					</div>
