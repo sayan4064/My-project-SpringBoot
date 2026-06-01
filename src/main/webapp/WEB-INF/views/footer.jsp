@@ -10,7 +10,11 @@
                             </a>
                             <h4>Follow Me</h4>
                         </div>
-
+                        <ul class="list">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
                     </div>
                 </div>
             </div>
