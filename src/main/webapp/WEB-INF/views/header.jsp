@@ -3,15 +3,15 @@
 		<div class="main_menu">
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="${pageContext.request.contextPath}/client/index"><img src="img/logo.png" alt=""></a>
+					<!-- Brand -->
+					<a class="navbar-brand logo_h" href="${pageContext.request.contextPath}/client/index"><img src="img/logo.png" alt="Sayan Metya"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
+					<!-- Nav Links -->
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-end">
 							<li class="nav-item ${pageContext.request.requestURI.contains('/index') ? 'active' : ''}"><a class="nav-link" href="${pageContext.request.contextPath}/client/index">Home</a></li>
@@ -25,3 +25,17 @@
 		</div>
 	</header>
 	<!--================ End Header Area =================-->
+
+	<script>
+	  // Sticky header on scroll
+	  window.addEventListener('scroll', function() {
+	    const header = document.querySelector('.header_area');
+	    if (header) {
+	      if (window.scrollY > 50) {
+	        header.classList.add('sticky');
+	      } else {
+	        header.classList.remove('sticky');
+	      }
+	    }
+	  });
+	</script>
