@@ -30,4 +30,9 @@ public class ContactServiceImpl implements contactService {
         contactEntity.setDatetime(LocalDateTime.now().toString());
         return contactRepository.save(contactEntity);
     }
+
+    @Override
+    public boolean existsByEmail(String email) {
+        return contactRepository.existsByEmail(email);
+    }
 }

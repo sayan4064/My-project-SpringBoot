@@ -30,6 +30,8 @@
 </head>
 
 <body>
+    <!-- Floating Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
 
 	<!--================ Start Header Area =================-->
     	<%@ include file="header.jsp" %>
@@ -41,20 +43,6 @@
             <div class="container">
                 <div class="banner_content text-center">
                     <h2>Get In Touch</h2>
-                    <c:if test="${not empty message}">
-                        <c:choose>
-                            <c:when test="${fn:contains(fn:toLowerCase(message), 'wrong') or fn:contains(fn:toLowerCase(message), 'fail') or fn:contains(fn:toLowerCase(message), 'error')}">
-                                <div class="alert_error">
-                                    ✗ ${message}
-                                </div>
-                            </c:when>
-                            <c:otherwise>
-                                <div class="alert_success">
-                                    ✓ ${message}
-                                </div>
-                            </c:otherwise>
-                        </c:choose>
-                    </c:if>
                     <div class="page_link">
                         <a href="${pageContext.request.contextPath}/client/index">Home</a>
                         <a href="${pageContext.request.contextPath}/client/contact">Contact</a>
@@ -123,29 +111,23 @@
 
                 <!-- Contact Form -->
                 <div class="col-lg-8 animate-up delay-1">
-                    <c:if test="${not empty errors}">
-                        <div class="alert alert-danger">
-                            <c:forEach items="${errors}" var="error">
-                                <p>⚠ ${error.defaultMessage}</p>
-                            </c:forEach>
-                        </div>
-                    </c:if>
+
 
                     <form action="${pageContext.request.contextPath}/client/saveContact" method="post" class="row contact_form" id="contactForm" novalidate="novalidate">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Full Name">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Your Full Name" value="${contactDto.name}">
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Address" value="${contactDto.email}">
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject">
+                                <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" value="${contactDto.subject}">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Your Message here..."></textarea>
+                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="Your Message here...">${contactDto.message}</textarea>
                             </div>
                         </div>
                         <div class="col-md-12 text-right" style="margin-top: 8px;">
@@ -192,6 +174,66 @@
     <script src="js/theme.js"></script>
     <!-- Modern UI Script -->
     <script src="js/modern-ui.js"></script>
+
+    <!-- Dynamic Toast Notification Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Function to display dynamic toast popup
+            function showToast(message, type = 'success') {
+                const container = document.getElementById('toast-container');
+                if (!container) return;
+                
+                const toast = document.createElement('div');
+                toast.className = 'toast-box toast-' + type + ' animate-toast-in';
+                
+                const icon = type === 'success' ? '✓' : '✗';
+                toast.innerHTML = 
+                    '<span class="toast-icon">' + icon + '</span>' +
+                    '<span class="toast-message">' + message + '</span>' +
+                    '<span class="toast-close">&times;</span>';
+                
+                container.appendChild(toast);
+                
+                // Manual close handler
+                toast.querySelector('.toast-close').addEventListener('click', function() {
+                    toast.classList.remove('animate-toast-in');
+                    toast.classList.add('animate-toast-out');
+                    setTimeout(() => toast.remove(), 400);
+                });
+                
+                // Auto close after 5 seconds
+                setTimeout(function() {
+                    if (toast.parentNode) {
+                        toast.classList.remove('animate-toast-in');
+                        toast.classList.add('animate-toast-out');
+                        setTimeout(() => toast.remove(), 400);
+                    }
+                }, 5000);
+            }
+
+            // Spawn Toasts from JSTL session attributes
+            <c:if test="${not empty message}">
+                <c:choose>
+                    <c:when test="${fn:contains(fn:toLowerCase(message), 'wrong') or fn:contains(fn:toLowerCase(message), 'fail') or fn:contains(fn:toLowerCase(message), 'error')}">
+                        showToast("${fn:escapeXml(message)}", "error");
+                    </c:when>
+                    <c:otherwise>
+                        showToast("${fn:escapeXml(message)}", "success");
+                    </c:otherwise>
+                </c:choose>
+            </c:if>
+
+            <c:if test="${not empty emailErrors}">
+                showToast("${fn:escapeXml(emailErrors)}", "error");
+            </c:if>
+
+            <c:if test="${not empty errors}">
+                <c:forEach items="${errors}" var="error">
+                    showToast("${fn:escapeXml(error.defaultMessage)}", "error");
+                </c:forEach>
+            </c:if>
+        });
+    </script>
 </body>
 
 </html>

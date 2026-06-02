@@ -36,8 +36,7 @@
 
 	<!--================ Start Home Banner Area =================-->
 	<section class="home_banner_area">
-		<div
-		</div>banner_inner">
+		<div class="banner_inner">
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-lg-7">

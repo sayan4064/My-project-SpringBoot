@@ -50,6 +50,11 @@ public class MyController {
         model.addAttribute("errors",bindingResult.getFieldErrors());
         return "contact";
     }
+
+    if(contactService.existsByEmail(contactDto.getEmail())){
+        model.addAttribute("emailErrors", "Email already exists");
+        return "contact";
+    }
     contactService.saveContact(contactDto);
     redirectAttributes.addFlashAttribute("message", "Contact saved successfully");
         return "redirect:/client/contact";

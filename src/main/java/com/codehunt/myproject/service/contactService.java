@@ -5,5 +5,5 @@ import com.codehunt.myproject.dto.contactEntity;
 
 public interface contactService {
     contactEntity saveContact(ContactDto contactDto);
-
+    boolean existsByEmail(String email);
 }
