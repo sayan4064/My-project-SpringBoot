@@ -1166,3 +1166,118 @@ textarea.form-control {
 .animate-toast-out {
   animation: toastOut 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* =====================================================
+   ADMIN DASHBOARD
+   ===================================================== */
+.admin-card {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-xl);
+  padding: 40px;
+  box-shadow: var(--shadow-card);
+  margin-top: 30px;
+  transition: var(--transition);
+}
+
+.admin-table-container {
+  overflow-x: auto;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--glass-border);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0;
+}
+
+.admin-table th {
+  background: var(--text-primary) !important;
+  color: #ffffff !important;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 600;
+  padding: 16px 20px;
+  text-align: left;
+  border: none;
+  font-size: 0.95rem;
+}
+
+.admin-table td {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  vertical-align: middle;
+  background: #ffffff;
+}
+
+.admin-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-table tbody tr {
+  transition: var(--transition);
+}
+
+.admin-table tbody tr:hover td {
+  background: var(--bg-light);
+  color: var(--text-primary);
+}
+
+.admin-empty-state {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.admin-empty-state i {
+  font-size: 3rem;
+  color: var(--primary);
+  opacity: 0.5;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.admin-empty-state h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.admin-empty-state p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 767px) {
+  .admin-card {
+    padding: 24px 16px;
+  }
+  .admin-table th, .admin-table td {
+    padding: 12px 14px;
+    font-size: 0.88rem;
+  }
+}
+
+.btn-delete {
+  background: transparent;
+  border: 1px solid #fed7d7;
+  color: #e53e3e;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-lg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-delete:hover {
+  background: #e53e3e;
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(229, 62, 62, 0.2);
+  transform: translateY(-2px);
+}

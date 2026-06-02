@@ -56,7 +56,7 @@ public class MyController {
         return "contact";
     }
     contactService.saveContact(contactDto);
-    redirectAttributes.addFlashAttribute("message", "Contact saved successfully");
+    redirectAttributes.addFlashAttribute("message", "Message sent successfully");
         return "redirect:/client/contact";
     }
 

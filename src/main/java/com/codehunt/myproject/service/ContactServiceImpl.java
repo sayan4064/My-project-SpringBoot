@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class ContactServiceImpl implements contactService {
@@ -34,5 +35,16 @@ public class ContactServiceImpl implements contactService {
     @Override
     public boolean existsByEmail(String email) {
         return contactRepository.existsByEmail(email);
+    }
+
+    @Override
+    public List<contactEntity> readAllContacts() {
+
+        return  contactRepository.findAll();
+    }
+
+    @Override
+    public void deleteContactById(int id) {
+        contactRepository.deleteById(id);
     }
 }
