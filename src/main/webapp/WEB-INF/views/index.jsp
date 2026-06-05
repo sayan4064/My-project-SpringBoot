@@ -45,9 +45,8 @@
 							<h1 class="hero_name">Sayan Metya</h1>
 							
 							<p class="hero_bio">
-								A passionate Java Backend Developer who always thrives to work on 
-								end to end products which develop sustainable and scalable 
-								social and technical systems to create impact.
+								Aspiring Java Backend Developer skilled in Java 17, Spring Boot 3, Spring Data JPA, Hibernate, MySQL, Maven, JSP, and JSTL. Passionate about building web applications, solving problems through code, and continuously learning modern backend technologies.
+
 							</p>
 							<div class="hero_social_links">
 								<a href="https://github.com" target="_blank" class="social_icon github"><i class="fa fa-github"></i></a>
@@ -75,26 +74,26 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-6 mb-4 animate-up">
 					<div class="stat-card">
-						<div class="stat-num">10+</div>
-						<div class="stat-label">Years Experience</div>
+						<div class="stat-num">5+</div>
+						<div class="stat-label">Projects Built</div>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
 					<div class="stat-card">
-						<div class="stat-num">50+</div>
-						<div class="stat-label">Projects Completed</div>
+						<div class="stat-num">1+</div>
+						<div class="stat-label">Years Active Coding</div>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 mb-4 animate-up delay-2">
 					<div class="stat-card">
-						<div class="stat-num">30+</div>
-						<div class="stat-label">Happy Clients</div>
+						<div class="stat-num">100%</div>
+						<div class="stat-label">Dedicated &amp; Eager</div>
 					</div>
 				</div>
 				<div class="col-lg-3 col-md-6 mb-4 animate-up delay-3">
 					<div class="stat-card">
-						<div class="stat-num">5★</div>
-						<div class="stat-label">Client Rating</div>
+						<div class="stat-num">15/6</div>
+						<div class="stat-label">Always Learning</div>
 					</div>
 				</div>
 			</div>
@@ -116,14 +115,10 @@
 					<div class="main_title text-left">
 						<h2>Let's Introduce<br>About Myself</h2>
 						<p>
-							I am a passionate Java Backend Developer with expertise in Spring Boot, REST APIs, 
-							and microservices architecture. I love building robust, scalable, and efficient 
-							backend systems that power modern web applications.
-						</p>
-						<p>
-							With a strong foundation in Java ecosystem technologies, I specialize in designing 
-							clean architecture, optimizing database queries, and crafting secure APIs. 
-							I am always eager to learn and adopt new technologies.
+							I am an aspiring Java Backend Developer passionate about building web applications and learning modern technologies. My skills include Java 17, Spring Boot 3, Spring Data JPA, Hibernate, MySQL, Maven, JSP, and JSTL.
+                            <br>
+                            I enjoy solving problems through code, working on projects, and continuously improving my backend development skills.
+
 						</p>
 						<!-- Skill Bars -->
 						<div style="margin-top: 28px;">
@@ -144,7 +139,7 @@
 								<div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
 							</div>
 						</div>
-						<a class="primary_btn" href="#" style="margin-top: 20px;"><span>Download CV</span></a>
+						<a class="primary_btn" href="${pageContext.request.contextPath}/docs/resume.pdf" target="_blank" style="margin-top: 20px;"><span>Download CV</span></a>
 					</div>
 				</div>
 			</div>
@@ -166,67 +161,52 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-8 animate-up delay-1">
 					<div class="row justify-content-center">
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo1.png" alt="Brand 1">
-								</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="tech-badge-card">
+								<i class="fa fa-code" style="color: #0077b5;"></i>
+								<span>Java 17</span>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo2.png" alt="Brand 2">
-								</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="tech-badge-card">
+								<i class="fa fa-leaf" style="color: #6db33f;"></i>
+								<span>Spring Boot 3</span>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo3.png" alt="Brand 3">
-								</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="tech-badge-card">
+								<i class="fa fa-database" style="color: #3b71ca;"></i>
+								<span>Spring Data JPA</span>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo4.png" alt="Brand 4">
-								</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="tech-badge-card">
+								<i class="fa fa-random" style="color: #bfa054;"></i>
+								<span>Hibernate ORM</span>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo5.png" alt="Brand 5">
-								</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="tech-badge-card">
+								<i class="fa fa-server" style="color: #f29111;"></i>
+								<span>MySQL</span>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo6.png" alt="Brand 6">
-								</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="tech-badge-card">
+								<i class="fa fa-cube" style="color: #c71a36;"></i>
+								<span>Maven</span>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo7.png" alt="Brand 7">
-								</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="tech-badge-card">
+								<i class="fa fa-html5" style="color: #e34f26;"></i>
+								<span>JSP</span>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo8.png" alt="Brand 8">
-								</div>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6">
-							<div class="single-brand-item d-table">
-								<div class="d-table-cell text-center">
-									<img src="img/brands/logo9.png" alt="Brand 9">
-								</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+							<div class="tech-badge-card">
+								<i class="fa fa-tags" style="color: #7c3aed;"></i>
+								<span>JSTL</span>
 							</div>
 						</div>
 					</div>
@@ -234,8 +214,8 @@
 				<div class="col-lg-3 offset-lg-1 col-md-6 animate-up delay-2">
 					<div class="client-info">
 						<div class="d-flex mb-50">
-							<span class="lage">10</span>
-							<span class="smll">Years<br>Experience<br>Working</span>
+
+							<span class="smll">Focus on Projects</span>
 						</div>
 						<div class="call-now d-flex">
 							<div>
@@ -301,53 +281,39 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-8 text-center animate-up">
 					<div class="main_title">
-						<h2>What Clients Say</h2>
-						<p>Don't just take my word for it — hear from the people I've worked with.</p>
+						<h2>My Coding Principles</h2>
+						<p>How I write software and approach problems.</p>
 					</div>
 				</div>
 			</div>
 			<div class="row" style="margin-top: 50px;">
-				<div class="testi_slider owl-carousel">
-		        	<div class="testi_item">
-		        		<div class="row align-items-center">
-		        			<div class="col-lg-4 text-center">
-		        				<img src="img/testimonials/t1.jpg" alt="Elite Martin">
-		        			</div>
-		        			<div class="col-lg-8">
-		        				<div class="testi_text">
-		        					<h4>Elite Martin</h4>
-									<p>Sayan built a blazing-fast REST API for our platform. His deep understanding of Spring Boot and clean code practices made collaboration a pleasure. Highly recommend!</p>
-		        				</div>
-		        			</div>
-		        		</div>
-		        	</div>
-		        	<div class="testi_item">
-		        		<div class="row align-items-center">
-		        			<div class="col-lg-4 text-center">
-		        				<img src="img/testimonials/t2.jpg" alt="David Saden">
-		        			</div>
-		        			<div class="col-lg-8">
-		        				<div class="testi_text">
-		        					<h4>David Saden</h4>
-									<p>Excellent backend architecture for our e-commerce app. Delivered on time, well-documented and production-ready. Will definitely hire again for future projects!</p>
-		        				</div>
-		        			</div>
-		        		</div>
-		        	</div>
-		        	<div class="testi_item">
-		        		<div class="row align-items-center">
-		        			<div class="col-lg-4 text-center">
-		        				<img src="img/testimonials/t1.jpg" alt="Julia Rogers">
-		        			</div>
-		        			<div class="col-lg-8">
-		        				<div class="testi_text">
-		        					<h4>Julia Rogers</h4>
-									<p>Impressed by the quality of code and attention to detail. The microservices architecture he implemented scaled perfectly when our traffic grew 10x. Outstanding work!</p>
-		        				</div>
-		        			</div>
-		        		</div>
-		        	</div>
-		        </div>
+				<div class="col-lg-4 col-md-6 mb-4 animate-up">
+					<div class="glass-card" style="padding: 40px 30px; text-align: center; height: 100%; border: 1px solid var(--glass-border); border-radius: var(--radius-lg); background: var(--bg-card); box-shadow: var(--shadow-card);">
+						<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+							<i class="fa fa-code" style="font-size: 1.8rem; color: var(--primary);"></i>
+						</div>
+						<h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">Clean Code</h4>
+						<p style="color: var(--text-muted); font-size: 0.95rem; margin: 0; line-height: 1.6;">I write clean, simple, and easy-to-read code.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4 animate-up delay-1">
+					<div class="glass-card" style="padding: 40px 30px; text-align: center; height: 100%; border: 1px solid var(--glass-border); border-radius: var(--radius-lg); background: var(--bg-card); box-shadow: var(--shadow-card);">
+						<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+							<i class="fa fa-bolt" style="font-size: 1.8rem; color: var(--primary);"></i>
+						</div>
+						<h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">Fast &amp; Secure</h4>
+						<p style="color: var(--text-muted); font-size: 0.95rem; margin: 0; line-height: 1.6;">I design fast REST APIs and secure databases.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4 animate-up delay-2">
+					<div class="glass-card" style="padding: 40px 30px; text-align: center; height: 100%; border: 1px solid var(--glass-border); border-radius: var(--radius-lg); background: var(--bg-card); box-shadow: var(--shadow-card);">
+						<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+							<i class="fa fa-book" style="font-size: 1.8rem; color: var(--primary);"></i>
+						</div>
+						<h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">Always Learning</h4>
+						<p style="color: var(--text-muted); font-size: 0.95rem; margin: 0; line-height: 1.6;">I learn new technologies and frameworks every day.</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

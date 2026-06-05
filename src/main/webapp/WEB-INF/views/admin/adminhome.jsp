@@ -59,8 +59,8 @@
             
             <div class="row justify-content-center" style="margin-top: 40px; gap: 30px 0;">
                 <!-- Card 1: Client Messages -->
-                <div class="col-lg-4 col-md-6 animate-up">
-                    <div class="feature_item" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                <div class="col-lg-4 col-md-6 d-flex animate-up">
+                    <div class="feature_item" style="width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                         <div>
                             <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
                                 <i class="fa fa-envelope" style="font-size: 2rem; color: var(--primary);"></i>
@@ -69,7 +69,7 @@
                             <p>View and manage inbox messages and inquiries sent by clients from the contact form.</p>
                         </div>
                         <div class="mt-4">
-                            <a href="${pageContext.request.contextPath}/admin/readallQuery" class="primary_btn" style="line-height: 38px; padding: 0 24px;">
+                            <a href="${pageContext.request.contextPath}/admin/readallQuery" class="primary_btn" style="line-height: 38px; padding: 0 24px; font-size: 0.85rem;">
                                 <span>View Queries &rarr;</span>
                             </a>
                         </div>
@@ -77,8 +77,8 @@
                 </div>
                 
                 <!-- Card 2: View Services -->
-                <div class="col-lg-4 col-md-6 animate-up delay-1">
-                    <div class="feature_item" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                <div class="col-lg-4 col-md-6 d-flex animate-up delay-1">
+                    <div class="feature_item" style="width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                         <div>
                             <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
                                 <i class="fa fa-cogs" style="font-size: 2rem; color: var(--primary);"></i>
@@ -87,7 +87,7 @@
                             <p>Review the list of portfolio services currently visible to users. Delete or modify items.</p>
                         </div>
                         <div class="mt-4">
-                            <a href="${pageContext.request.contextPath}/admin/readallServices" class="primary_btn" style="line-height: 38px; padding: 0 24px;">
+                            <a href="${pageContext.request.contextPath}/admin/readallServices" class="primary_btn" style="line-height: 38px; padding: 0 24px; font-size: 0.85rem;">
                                 <span>Manage Services &rarr;</span>
                             </a>
                         </div>
@@ -95,8 +95,8 @@
                 </div>
 
                 <!-- Card 3: Add Service -->
-                <div class="col-lg-4 col-md-6 animate-up delay-2">
-                    <div class="feature_item" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                <div class="col-lg-4 col-md-6 d-flex animate-up delay-2">
+                    <div class="feature_item" style="width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
                         <div>
                             <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
                                 <i class="fa fa-plus-circle" style="font-size: 2rem; color: var(--primary);"></i>
@@ -105,8 +105,26 @@
                             <p>Add new service cards to your website. Provide titles, descriptions, and custom icon images.</p>
                         </div>
                         <div class="mt-4">
-                            <a href="${pageContext.request.contextPath}/admin/saveServices" class="primary_btn" style="line-height: 38px; padding: 0 24px;">
+                            <a href="${pageContext.request.contextPath}/admin/saveServices" class="primary_btn" style="line-height: 38px; padding: 0 24px; font-size: 0.85rem;">
                                 <span>Create Service &rarr;</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Upload Resume -->
+                <div class="col-lg-4 col-md-6 d-flex animate-up delay-3">
+                    <div class="feature_item" style="width: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div style="width: 70px; height: 70px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 24px;">
+                                <i class="fa fa-file-text" style="font-size: 2rem; color: var(--primary);"></i>
+                            </div>
+                            <h4>Upload Resume</h4>
+                            <p>Upload your latest CV / resume file in PDF format so clients can download it directly.</p>
+                        </div>
+                        <div class="mt-4">
+                            <a href="${pageContext.request.contextPath}/admin/uploadResume" class="primary_btn" style="line-height: 38px; padding: 0 24px; font-size: 0.85rem;">
+                                <span>Upload CV &rarr;</span>
                             </a>
                         </div>
                     </div>

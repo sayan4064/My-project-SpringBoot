@@ -64,14 +64,10 @@
                     <div class="main_title text-left">
                         <h2>Who Am I?</h2>
                         <p>
-                            I'm <strong style="color: var(--primary);">Sayan Metya</strong>, a passionate Java Backend Developer 
-                            based in West Bengal, India. I specialize in building scalable, high-performance backend 
-                            systems using Spring Boot and modern Java technologies.
+                            I'm <strong style="color: var(--primary);">Sayan Metya</strong>, an aspiring Java Backend Developer from West Bengal, India. I enjoy building web applications and learning modern backend technologies.
                         </p>
                         <p>
-                            With over 10 years of experience, I have delivered production-grade applications 
-                            for clients across various industries. My approach combines clean code principles, 
-                            solid architecture, and a deep understanding of the business domain.
+                           My skills include Java 17, Spring Boot 3, Spring Data JPA, Hibernate, MySQL, Maven, JSP, and JSTL. I am passionate about coding, solving problems, and continuously improving my development skills through hands-on projects.
                         </p>
 
                         <!-- Skills -->
@@ -98,7 +94,7 @@
                             </div>
                         </div>
 
-                        <a class="primary_btn" href="#" style="margin-top: 20px;"><span>Download CV</span></a>
+                        <a class="primary_btn" href="${pageContext.request.contextPath}/docs/resume.pdf" target="_blank" style="margin-top: 20px;"><span>Download CV</span></a>
                     </div>
                 </div>
             </div>
@@ -120,67 +116,52 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 animate-up delay-1">
                     <div class="row justify-content-center">
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-brand-item d-table">
-                                <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo1.png" alt="">
-                                </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                            <div class="tech-badge-card">
+                                <i class="fa fa-code" style="color: #0077b5;"></i>
+                                <span>Java 17</span>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-brand-item d-table">
-                                <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo2.png" alt="">
-                                </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                            <div class="tech-badge-card">
+                                <i class="fa fa-leaf" style="color: #6db33f;"></i>
+                                <span>Spring Boot 3</span>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-brand-item d-table">
-                                <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo3.png" alt="">
-                                </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                            <div class="tech-badge-card">
+                                <i class="fa fa-database" style="color: #3b71ca;"></i>
+                                <span>Spring Data JPA</span>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-brand-item d-table">
-                                <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo4.png" alt="">
-                                </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                            <div class="tech-badge-card">
+                                <i class="fa fa-random" style="color: #bfa054;"></i>
+                                <span>Hibernate ORM</span>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-brand-item d-table">
-                                <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo5.png" alt="">
-                                </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                            <div class="tech-badge-card">
+                                <i class="fa fa-server" style="color: #f29111;"></i>
+                                <span>MySQL</span>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-brand-item d-table">
-                                <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo6.png" alt="">
-                                </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                            <div class="tech-badge-card">
+                                <i class="fa fa-cube" style="color: #c71a36;"></i>
+                                <span>Maven</span>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-brand-item d-table">
-                                <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo7.png" alt="">
-                                </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                            <div class="tech-badge-card">
+                                <i class="fa fa-html5" style="color: #e34f26;"></i>
+                                <span>JSP</span>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-brand-item d-table">
-                                <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo8.png" alt="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-6">
-                            <div class="single-brand-item d-table">
-                                <div class="d-table-cell text-center">
-                                    <img src="img/brands/logo9.png" alt="">
-                                </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 mb-4">
+                            <div class="tech-badge-card">
+                                <i class="fa fa-tags" style="color: #7c3aed;"></i>
+                                <span>JSTL</span>
                             </div>
                         </div>
                     </div>
@@ -188,8 +169,8 @@
                 <div class="col-lg-3 offset-lg-1 col-md-6 animate-up delay-2">
                     <div class="client-info">
                         <div class="d-flex mb-50">
-                            <span class="lage">10</span>
-                            <span class="smll">Years<br>Experience<br>Working</span>
+                            <span class="lage">10+</span>
+                            <span class="smll">Coding<br>Projects<br>Built</span>
                         </div>
                         <div class="call-now d-flex">
                             <div>
@@ -209,61 +190,47 @@
 
 	<!--================ Start Testimonial Area =================-->
 	<div class="testimonial_area section_gap_bottom">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center animate-up">
-                    <div class="main_title">
-                        <h2>Client Testimonials</h2>
-                        <p>What my clients have to say about working with me.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="margin-top: 50px;">
-                <div class="testi_slider owl-carousel">
-                    <div class="testi_item">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 text-center">
-                                <img src="img/testimonials/t1.jpg" alt="Elite Martin">
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="testi_text">
-                                    <h4>Elite Martin</h4>
-                                    <p>Sayan delivered a production-ready backend system ahead of schedule. His code is clean, well-tested and perfectly documented. Amazing experience!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testi_item">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 text-center">
-                                <img src="img/testimonials/t2.jpg" alt="David Saden">
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="testi_text">
-                                    <h4>David Saden</h4>
-                                    <p>Excellent microservices architecture, great communication throughout the project. I highly recommend Sayan for any Java backend work!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testi_item">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 text-center">
-                                <img src="img/testimonials/t1.jpg" alt="Julia Rogers">
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="testi_text">
-                                    <h4>Julia Rogers</h4>
-                                    <p>The API Sayan built handles thousands of requests per second without breaking a sweat. Truly a backend wizard! Will hire again.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--================ End Testimonial Area =================-->
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center animate-up">
+					<div class="main_title">
+						<h2>My Coding Principles</h2>
+						<p>How I write software and approach problems.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin-top: 50px;">
+				<div class="col-lg-4 col-md-6 mb-4 animate-up">
+					<div class="glass-card" style="padding: 40px 30px; text-align: center; height: 100%; border: 1px solid var(--glass-border); border-radius: var(--radius-lg); background: var(--bg-card); box-shadow: var(--shadow-card);">
+						<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+							<i class="fa fa-code" style="font-size: 1.8rem; color: var(--primary);"></i>
+						</div>
+						<h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">Clean Code</h4>
+						<p style="color: var(--text-muted); font-size: 0.95rem; margin: 0; line-height: 1.6;">I write clean, simple, and easy-to-read code.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4 animate-up delay-1">
+					<div class="glass-card" style="padding: 40px 30px; text-align: center; height: 100%; border: 1px solid var(--glass-border); border-radius: var(--radius-lg); background: var(--bg-card); box-shadow: var(--shadow-card);">
+						<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+							<i class="fa fa-bolt" style="font-size: 1.8rem; color: var(--primary);"></i>
+						</div>
+						<h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">Fast &amp; Secure</h4>
+						<p style="color: var(--text-muted); font-size: 0.95rem; margin: 0; line-height: 1.6;">I design fast REST APIs and secure databases.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4 animate-up delay-2">
+					<div class="glass-card" style="padding: 40px 30px; text-align: center; height: 100%; border: 1px solid var(--glass-border); border-radius: var(--radius-lg); background: var(--bg-card); box-shadow: var(--shadow-card);">
+						<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+							<i class="fa fa-book" style="font-size: 1.8rem; color: var(--primary);"></i>
+						</div>
+						<h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">Always Learning</h4>
+						<p style="color: var(--text-muted); font-size: 0.95rem; margin: 0; line-height: 1.6;">I learn new technologies and frameworks every day.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--================ End Testimonial Area =================-->
  
  <!--================Footer Area =================-->
  	        	<%@ include file="footer.jsp" %>

@@ -140,13 +140,12 @@
             </div>
 
             <!-- Map -->
-            <div id="mapBox" class="mapBox" 
-                data-lat="40.701083" 
-                data-lon="-74.1522848" 
-                data-zoom="13" 
-                data-info="West Bengal, India"
-                data-mlat="40.701083"
-                data-mlon="-74.1522848">
+            <div class="row mt-5 animate-up">
+                <div class="col-lg-12">
+                    <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--glass-border); box-shadow: var(--shadow-card);">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7377.734466975117!2d87.73141500000003!3d22.396362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1780683360305!5m2!1sen!2sin" width="100%" height="450" style="border:0; display: block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
