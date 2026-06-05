@@ -137,61 +137,49 @@
     <!--================ End Features Area =================-->
 
 	<!--================ Start Testimonial Area =================-->
+	<!--================ Start Testimonial Area =================-->
 	<div class="testimonial_area section_gap_bottom">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center animate-up">
-                    <div class="main_title">
-                        <h2>Client Testimonials</h2>
-                        <p>Feedback from clients who trusted me with their projects.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row" style="margin-top: 50px;">
-                <div class="testi_slider owl-carousel">
-                    <div class="testi_item">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 text-center">
-                                <img src="img/testimonials/t1.jpg" alt="Elite Martin">
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="testi_text">
-                                    <h4>Elite Martin</h4>
-                                    <p>Sayan built a blazing-fast REST API for our platform. His deep understanding of Spring Boot and clean code practices made collaboration a pleasure.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testi_item">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 text-center">
-                                <img src="img/testimonials/t2.jpg" alt="David Saden">
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="testi_text">
-                                    <h4>David Saden</h4>
-                                    <p>Excellent backend architecture for our e-commerce app. Delivered on time, well-documented and production-ready. Will definitely hire again!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testi_item">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 text-center">
-                                <img src="img/testimonials/t1.jpg" alt="Julia Rogers">
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="testi_text">
-                                    <h4>Julia Rogers</h4>
-                                    <p>The microservices architecture he implemented scaled perfectly when our traffic grew 10x overnight. Absolutely outstanding work!</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center animate-up">
+					<div class="main_title">
+						<h2>My Coding Principles</h2>
+						<p>How I write software and approach problems.</p>
+					</div>
+				</div>
+			</div>
+			<div class="row" style="margin-top: 50px;">
+				<div class="col-lg-4 col-md-6 mb-4 animate-up">
+					<div class="glass-card" style="padding: 40px 30px; text-align: center; height: 100%; border: 1px solid var(--glass-border); border-radius: var(--radius-lg); background: var(--bg-card); box-shadow: var(--shadow-card);">
+						<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+							<i class="fa fa-code" style="font-size: 1.8rem; color: var(--primary);"></i>
+						</div>
+						<h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">Clean Code</h4>
+						<p style="color: var(--text-muted); font-size: 0.95rem; margin: 0; line-height: 1.6;">I write clean, simple, and easy-to-read code.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4 animate-up delay-1">
+					<div class="glass-card" style="padding: 40px 30px; text-align: center; height: 100%; border: 1px solid var(--glass-border); border-radius: var(--radius-lg); background: var(--bg-card); box-shadow: var(--shadow-card);">
+						<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+							<i class="fa fa-bolt" style="font-size: 1.8rem; color: var(--primary);"></i>
+						</div>
+						<h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">Fast &amp; Secure</h4>
+						<p style="color: var(--text-muted); font-size: 0.95rem; margin: 0; line-height: 1.6;">I design fast REST APIs and secure databases.</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 mb-4 animate-up delay-2">
+					<div class="glass-card" style="padding: 40px 30px; text-align: center; height: 100%; border: 1px solid var(--glass-border); border-radius: var(--radius-lg); background: var(--bg-card); box-shadow: var(--shadow-card);">
+						<div style="width: 60px; height: 60px; border-radius: 50%; background: var(--primary-glow); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px;">
+							<i class="fa fa-book" style="font-size: 1.8rem; color: var(--primary);"></i>
+						</div>
+						<h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-primary); margin-bottom: 12px;">Always Learning</h4>
+						<p style="color: var(--text-muted); font-size: 0.95rem; margin: 0; line-height: 1.6;">I learn new technologies and frameworks every day.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--================ End Testimonial Area =================-->
     <!--================ End Testimonial Area =================-->
     
    

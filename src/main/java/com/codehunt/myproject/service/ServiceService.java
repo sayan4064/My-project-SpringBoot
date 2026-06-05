@@ -12,4 +12,7 @@ public interface ServiceService {
 
         void deleteService(int id);
 
+        ServiceEntity updateService(ServiceDto serviceDto ,int id,String filename);
+
+        ServiceEntity getServiceById(int id);
 }

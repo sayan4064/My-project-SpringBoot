@@ -17,11 +17,11 @@ import org.springframework.web.multipart.MultipartFile;
 public class ServiceDto {
 
 
-    @Size(min = 3, max = 100, message = "Title must be between 3 and 100 characters")
+    @Size(min = 3, max = 50, message = "Title must be between 3 and 50 characters")
     private String title;
 
 
-    @Size(min = 10, max = 500, message = "Description must be between 10 and 500 characters")
+    @Size(min = 10, max = 100, message = "Description must be between 10 and 100 characters")
     private String description;
 
     private MultipartFile image;
