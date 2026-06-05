@@ -106,6 +106,13 @@
       entries.forEach(function (entry) {
         if (!entry.isIntersecting) return;
         var el = entry.target;
+        
+        // Skip animation for fractions or ratios like "24/7" to prevent layout issues
+        if (el.textContent.indexOf('/') !== -1) {
+          observer.unobserve(el);
+          return;
+        }
+
         var raw = el.textContent.replace(/[^0-9]/g, '');
         var suffix = el.textContent.replace(/[0-9]/g, '');
         if (!raw) return;

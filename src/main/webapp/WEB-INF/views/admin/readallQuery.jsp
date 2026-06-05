@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!doctype html>
 <html lang="en">
 
@@ -24,6 +25,8 @@
 </head>
 
 <body>
+    <!-- Dynamic Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
 
 	<!--================ Start Header Area =================-->
     <%@ include file="../header.jsp" %>
@@ -152,6 +155,55 @@
                 });
             }
         }
+    </script>
+    <!-- Dynamic Toast Notification Script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            function showToast(message, type = 'success') {
+                const container = document.getElementById('toast-container');
+                if (!container) return;
+                
+                const toast = document.createElement('div');
+                toast.className = 'toast-box toast-' + type + ' animate-toast-in';
+                
+                const icon = type === 'success' ? '✓' : '✗';
+                toast.innerHTML = 
+                    '<span class="toast-icon">' + icon + '</span>' +
+                    '<span class="toast-message">' + message + '</span>' +
+                    '<span class="toast-close">&times;</span>';
+                
+                container.appendChild(toast);
+                
+                toast.querySelector('.toast-close').addEventListener('click', function() {
+                    toast.classList.remove('animate-toast-in');
+                    toast.classList.add('animate-toast-out');
+                    setTimeout(() => toast.remove(), 400);
+                });
+                
+                setTimeout(function() {
+                    if (toast.parentNode) {
+                        toast.classList.remove('animate-toast-in');
+                        toast.classList.add('animate-toast-out');
+                        setTimeout(() => toast.remove(), 400);
+                    }
+                }, 5000);
+            }
+
+            <c:if test="${not empty message}">
+                <c:choose>
+                    <c:when test="${fn:contains(fn:toLowerCase(message), 'wrong') or fn:contains(fn:toLowerCase(message), 'fail') or fn:contains(fn:toLowerCase(message), 'error')}">
+                        showToast("${fn:escapeXml(message)}", "error");
+                    </c:when>
+                    <c:otherwise>
+                        showToast("${fn:escapeXml(message)}", "success");
+                    </c:otherwise>
+                </c:choose>
+            </c:if>
+
+            <c:if test="${not empty error}">
+                showToast("${fn:escapeXml(error)}", "error");
+            </c:if>
+        });
     </script>
 </body>
 

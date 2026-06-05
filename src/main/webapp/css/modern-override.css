@@ -1293,3 +1293,37 @@ textarea.form-control {
 .primary_btn span {
   padding: 0 20px !important;
 }
+
+/* Tech Stack Badge Cards */
+.tech-badge-card {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: var(--transition);
+  height: 85px;
+  box-shadow: var(--shadow-card);
+}
+
+.tech-badge-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 25px rgba(0, 119, 181, 0.1);
+}
+
+.tech-badge-card i {
+  font-size: 2rem;
+  color: var(--primary);
+  width: 40px;
+  text-align: center;
+}
+
+.tech-badge-card span {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
