@@ -16,6 +16,7 @@
                             <li><a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
                             <li><a href="#" title="GitHub"><i class="fa fa-github"></i></a></li>
                             <li><a href="#" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>

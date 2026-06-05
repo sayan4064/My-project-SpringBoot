@@ -11,19 +11,19 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 public class GlobalExceptionHandler {
     @ExceptionHandler(Exception.class)
     public String handleException(Exception exception, RedirectAttributes redirectAttributes, HttpServletRequest request){
-           String header=request.getHeader("referer");
+        String header = request.getHeader("referer");
+        String redirectUrl = (header != null && !header.isEmpty()) ? header : "/client/index";
 
         redirectAttributes.addFlashAttribute("message", "Something went wrong ");
-            return "redirect:"+header;
+        return "redirect:" + redirectUrl;
+    }
 
-
-        }
     @ExceptionHandler(MaxUploadSizeExceededException.class)
     public String handleMaxFileSizeException(Exception exception, RedirectAttributes redirectAttributes, HttpServletRequest request){
-        String header=request.getHeader("referer");
+        String header = request.getHeader("referer");
+        String redirectUrl = (header != null && !header.isEmpty()) ? header : "/client/index";
 
         redirectAttributes.addFlashAttribute("message", "File size must not  exceeds the 5MB");
-        return "redirect:"+header;
-
+        return "redirect:" + redirectUrl;
     }
 }

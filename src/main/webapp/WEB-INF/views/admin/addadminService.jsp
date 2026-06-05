@@ -68,14 +68,14 @@
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="title" style="font-weight: 600; color: var(--text-primary); font-family: 'Space Grotesk', sans-serif;">Service Title</label>
-                                    <input type="text" class="form-control" id="title" name="title" placeholder="e.g. Backend Development" required>
+                                    <input type="text" class="form-control" id="title" name="title" placeholder="e.g. Backend Development" value="${serviceDto.title}" required>
                                 </div>
                             </div>
                             
                             <div class="col-md-12">
                                 <div class="form-group">
                                     <label for="description" style="font-weight: 600; color: var(--text-primary); font-family: 'Space Grotesk', sans-serif;">Service Description</label>
-                                    <textarea class="form-control" name="description" id="description" rows="4" placeholder="Describe the service details (min 10 characters)..." required></textarea>
+                                    <textarea class="form-control" name="description" id="description" rows="4" placeholder="Describe the service details (min 10 characters)..." required>${serviceDto.description}</textarea>
                                 </div>
                             </div>
                             

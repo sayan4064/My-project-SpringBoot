@@ -1,6 +1,7 @@
 package com.codehunt.myproject.dto;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,6 +21,7 @@ public class contactEntity {
     @Column(unique = true)
     private String email;
     private String subject;
+    @Column(length = 500)
     private String message;
 
     private String datetime;
