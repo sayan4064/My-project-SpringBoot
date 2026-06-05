@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!doctype html>
 <html lang="en">
@@ -67,34 +68,49 @@
 
             <!-- Primary Services -->
             <div class="row feature_inner" style="margin-top: 60px;">
-                <div class="col-lg-3 col-md-6 mb-4 animate-up">
-                    <div class="feature_item">
-                        <img src="img/services/s1.png" alt="Backend Development">
-                        <h4>Backend Development</h4>
-                        <p>Scalable Java Spring Boot applications with clean architecture and SOLID principles.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
-                    <div class="feature_item">
-                        <img src="img/services/s2.png" alt="API Design">
-                        <h4>REST API Design</h4>
-                        <p>Well-documented RESTful APIs with Swagger, authentication, and proper error handling.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 animate-up delay-2">
-                    <div class="feature_item">
-                        <img src="img/services/s3.png" alt="Database Design">
-                        <h4>Database Design</h4>
-                        <p>Optimized relational and NoSQL database schemas with efficient query performance.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4 animate-up delay-3">
-                    <div class="feature_item">
-                        <img src="img/services/s4.png" alt="Cloud & DevOps">
-                        <h4>Cloud &amp; DevOps</h4>
-                        <p>Docker containerization, CI/CD pipelines, and cloud infrastructure on AWS/GCP.</p>
-                    </div>
-                </div>
+                <c:choose>
+                    <c:when test="${not empty services}">
+                        <c:forEach items="${services}" var="service" varStatus="status">
+                            <div class="col-lg-3 col-md-6 mb-4 animate-up <c:if test='${status.index > 0}'>delay-${status.index % 4}</c:if>">
+                                <div class="feature_item" style="height: 100%;">
+                                    <img src="${pageContext.request.contextPath}/img/services/${service.image}" alt="${service.title}">
+                                    <h4>${service.title}</h4>
+                                    <p>${service.description}</p>
+                                </div>
+                            </div>
+                        </c:forEach>
+                    </c:when>
+                    <c:otherwise>
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up">
+                            <div class="feature_item" style="height: 100%;">
+                                <img src="img/services/s1.png" alt="Backend Development">
+                                <h4>Backend Development</h4>
+                                <p>Scalable Java Spring Boot applications with clean architecture and SOLID principles.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+                            <div class="feature_item" style="height: 100%;">
+                                <img src="img/services/s2.png" alt="API Design">
+                                <h4>REST API Design</h4>
+                                <p>Well-documented RESTful APIs with Swagger, authentication, and proper error handling.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-2">
+                            <div class="feature_item" style="height: 100%;">
+                                <img src="img/services/s3.png" alt="Database Design">
+                                <h4>Database Design</h4>
+                                <p>Optimized relational and NoSQL database schemas with efficient query performance.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-3">
+                            <div class="feature_item" style="height: 100%;">
+                                <img src="img/services/s4.png" alt="Cloud & DevOps">
+                                <h4>Cloud &amp; DevOps</h4>
+                                <p>Docker containerization, CI/CD pipelines, and cloud infrastructure on AWS/GCP.</p>
+                            </div>
+                        </div>
+                    </c:otherwise>
+                </c:choose>
             </div>
 
             <!-- Process Section -->

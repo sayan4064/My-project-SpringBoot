@@ -18,7 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 public class ServiceEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private String id;
+    private int id;
     @Column(length = 50)
     private String title;
 

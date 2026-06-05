@@ -4,6 +4,7 @@ package com.codehunt.myproject.controller;
 import com.codehunt.myproject.dto.ContactDto;
 import com.codehunt.myproject.dto.ServiceDto;
 import com.codehunt.myproject.service.contactService;
+import com.codehunt.myproject.service.ServiceService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -27,6 +28,9 @@ public class AdminController {
         @Autowired
         contactService contactService;
 
+        @Autowired
+        ServiceService serviceService;
+
         @GetMapping("/home")
         public String home(){
 
@@ -47,7 +51,7 @@ public class AdminController {
         }
         @GetMapping("/saveServices")
         public String saveServices(){
-                return "admin/saveServices";
+                return "admin/adminService";
         }
 
         @PostMapping("/saveServices")
@@ -57,18 +61,18 @@ public class AdminController {
                 if(bindingResult.hasErrors()){
                         model.addAttribute("result","Invalid Input");
                         model.addAttribute("errors",bindingResult.getFieldErrors());
-                        return "contact";
+                        return "admin/adminService";
                 }
                 if(serviceDto.getImage()==null || serviceDto.getImage().isEmpty()){
                         model.addAttribute("error","Image is Empty");
-                        return "admin/saveServices";
+                        return "admin/adminService";
                 }
 
                 MultipartFile file = serviceDto.getImage();
                 long fileSize = file.getSize();
                 if(fileSize >(2*1024*1024) ){
                     model.addAttribute("fileError","File Size must not Exceed 2MB");
-                    return  "admin/saveServices";
+                    return  "admin/adminService";
                 }
 
                 String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
@@ -76,11 +80,17 @@ public class AdminController {
                 String uploadDir = System.getProperty("user.dir")
                         + "/src/main/webapp/img/services";
 
-                Path path = Paths.get(uploadDir, fileName);
+                File dir = new File(uploadDir);
+                if (!dir.exists()) {
+                    dir.mkdirs();
+                }
 
+                Path path = Paths.get(uploadDir, fileName);
                 file.transferTo(path.toFile());
 
+                serviceService.saveService(serviceDto, fileName);
 
-        return "admin/saveServices";
-}
+                redirectAttributes.addFlashAttribute("message", "Service uploaded successfully");
+                return "redirect:/admin/saveServices";
+        }
 }

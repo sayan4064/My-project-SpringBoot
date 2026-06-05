@@ -2,6 +2,7 @@ package com.codehunt.myproject.controller;
 
 import com.codehunt.myproject.dto.ContactDto;
 import com.codehunt.myproject.service.contactService;
+import com.codehunt.myproject.service.ServiceService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,9 +21,12 @@ public class MyController {
     @Autowired
     contactService contactService;
 
-        @GetMapping("/index")
-        public String home(){
+    @Autowired
+    ServiceService serviceService;
 
+        @GetMapping("/index")
+        public String home(Model model){
+            model.addAttribute("services", serviceService.getAllServices());
             return "index";
         }
 
@@ -33,8 +37,8 @@ public class MyController {
     }
 
     @GetMapping("/service")
-    public String service(){
-
+    public String service(Model model){
+        model.addAttribute("services", serviceService.getAllServices());
         return "services";
     }
 

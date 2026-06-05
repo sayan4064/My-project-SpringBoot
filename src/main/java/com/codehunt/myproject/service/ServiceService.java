@@ -7,5 +7,7 @@ public interface ServiceService {
 
         ServiceEntity saveService(ServiceDto  serviceDto,String filename);
 
+        java.util.List<ServiceEntity> getAllServices();
+
 
 }

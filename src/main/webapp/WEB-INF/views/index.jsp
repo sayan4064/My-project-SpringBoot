@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!doctype html>
 <html lang="en">
@@ -267,34 +268,49 @@
 				</div>
 			</div>
 			<div class="row feature_inner" style="margin-top: 60px;">
-				<div class="col-lg-3 col-md-6 mb-4 animate-up">
-					<div class="feature_item">
-						<img src="img/services/s1.png" alt="WordPress Development">
-						<h4>Backend Development</h4>
-						<p>Robust Java Spring Boot APIs and microservices built for scalability and performance.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
-					<div class="feature_item">
-						<img src="img/services/s2.png" alt="UI/UX Design">
-						<h4>API Design</h4>
-						<p>RESTful API design with clean contracts, Swagger docs, and best security practices.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 mb-4 animate-up delay-2">
-					<div class="feature_item">
-						<img src="img/services/s3.png" alt="Web Design">
-						<h4>Database Design</h4>
-						<p>Optimized SQL/NoSQL schema design with JPA/Hibernate for blazing fast queries.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 mb-4 animate-up delay-3">
-					<div class="feature_item">
-						<img src="img/services/s4.png" alt="SEO Optimization">
-						<h4>Cloud &amp; DevOps</h4>
-						<p>Docker, CI/CD pipelines and cloud deployments to keep your app always running.</p>
-					</div>
-				</div>
+				<c:choose>
+					<c:when test="${not empty services}">
+						<c:forEach items="${services}" var="service" varStatus="status">
+							<div class="col-lg-3 col-md-6 mb-4 animate-up <c:if test='${status.index > 0}'>delay-${status.index % 4}</c:if>">
+								<div class="feature_item" style="height: 100%;">
+									<img src="${pageContext.request.contextPath}/img/services/${service.image}" alt="${service.title}">
+									<h4>${service.title}</h4>
+									<p>${service.description}</p>
+								</div>
+							</div>
+						</c:forEach>
+					</c:when>
+					<c:otherwise>
+						<div class="col-lg-3 col-md-6 mb-4 animate-up">
+							<div class="feature_item" style="height: 100%;">
+								<img src="img/services/s1.png" alt="Backend Development">
+								<h4>Backend Development</h4>
+								<p>Robust Java Spring Boot APIs and microservices built for scalability and performance.</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
+							<div class="feature_item" style="height: 100%;">
+								<img src="img/services/s2.png" alt="API Design">
+								<h4>API Design</h4>
+								<p>RESTful API design with clean contracts, Swagger docs, and best security practices.</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 mb-4 animate-up delay-2">
+							<div class="feature_item" style="height: 100%;">
+								<img src="img/services/s3.png" alt="Database Design">
+								<h4>Database Design</h4>
+								<p>Optimized SQL/NoSQL schema design with JPA/Hibernate for blazing fast queries.</p>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-6 mb-4 animate-up delay-3">
+							<div class="feature_item" style="height: 100%;">
+								<img src="img/services/s4.png" alt="Cloud & DevOps">
+								<h4>Cloud &amp; DevOps</h4>
+								<p>Docker, CI/CD pipelines and cloud deployments to keep your app always running.</p>
+							</div>
+						</div>
+					</c:otherwise>
+				</c:choose>
 			</div>
 		</div>
 	</section>
