@@ -2,6 +2,7 @@ package com.codehunt.myproject.service;
 
 import com.codehunt.myproject.dto.ServiceDto;
 import com.codehunt.myproject.dto.ServiceEntity;
+import org.springframework.web.bind.annotation.RequestParam;
 
 public interface ServiceService {
 
@@ -9,5 +10,6 @@ public interface ServiceService {
 
         java.util.List<ServiceEntity> getAllServices();
 
+        void deleteService(int id);
 
 }

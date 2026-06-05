@@ -43,7 +43,7 @@
                     <h2>My Services</h2>
                     <div class="page_link">
                         <a href="${pageContext.request.contextPath}/client/index">Home</a>
-                        <a href="${pageContext.request.contextPath}/client/service">Services</a>
+                        <a href="${pageContext.request.contextPath}/client/service" class="active">Services</a>
                     </div>
                 </div>
             </div>
@@ -67,7 +67,7 @@
             </div>
 
             <!-- Primary Services -->
-            <div class="row feature_inner" style="margin-top: 60px;">
+            <div class="row feature_inner" style="margin-top: 20px;">
                 <c:choose>
                     <c:when test="${not empty services}">
                         <c:forEach items="${services}" var="service" varStatus="status">
@@ -81,32 +81,11 @@
                         </c:forEach>
                     </c:when>
                     <c:otherwise>
-                        <div class="col-lg-3 col-md-6 mb-4 animate-up">
-                            <div class="feature_item" style="height: 100%;">
-                                <img src="img/services/s1.png" alt="Backend Development">
-                                <h4>Backend Development</h4>
-                                <p>Scalable Java Spring Boot applications with clean architecture and SOLID principles.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-1">
-                            <div class="feature_item" style="height: 100%;">
-                                <img src="img/services/s2.png" alt="API Design">
-                                <h4>REST API Design</h4>
-                                <p>Well-documented RESTful APIs with Swagger, authentication, and proper error handling.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-2">
-                            <div class="feature_item" style="height: 100%;">
-                                <img src="img/services/s3.png" alt="Database Design">
-                                <h4>Database Design</h4>
-                                <p>Optimized relational and NoSQL database schemas with efficient query performance.</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-6 mb-4 animate-up delay-3">
-                            <div class="feature_item" style="height: 100%;">
-                                <img src="img/services/s4.png" alt="Cloud & DevOps">
-                                <h4>Cloud &amp; DevOps</h4>
-                                <p>Docker containerization, CI/CD pipelines, and cloud infrastructure on AWS/GCP.</p>
+                        <div class="col-lg-12 text-center animate-up" style="padding: 0; margin-top: -20px;">
+                            <div class="glass-card" style="padding: 30px 40px; display: inline-block; max-width: 500px; width: 100%; border: 1px solid var(--glass-border); border-radius: var(--radius-xl); background: #ffffff; box-shadow: var(--shadow-card);">
+                                <i class="fa fa-info-circle" style="font-size: 3rem; color: var(--primary); margin-bottom: 16px;"></i>
+                                <h4 style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">No Services Available</h4>
+                                <p style="color: var(--text-muted); font-size: 0.95rem; margin: 0;">no services availevel in this time</p>
                             </div>
                         </div>
                     </c:otherwise>

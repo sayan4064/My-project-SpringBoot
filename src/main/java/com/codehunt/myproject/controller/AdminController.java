@@ -37,21 +37,21 @@ public class AdminController {
             return "admin/adminhome";
         }
 
-        @GetMapping("/readallData")
-        public String readallData(Model model){
+        @GetMapping("/readallQuery")
+        public String readallQuery(Model model){
 
                 model.addAttribute("contacts", contactService.readAllContacts());
-                return "admin/readalldata";
+                return "admin/readallQuery";
         }
 
         @DeleteMapping("/deleteById")
         public String deleteById(@RequestParam int id){
                 contactService.deleteContactById(id);
-          return "redirect:/admin/readallData";
+          return "redirect:/admin/readallQuery";
         }
         @GetMapping("/saveServices")
         public String saveServices(){
-                return "admin/adminService";
+                return "admin/addadminService";
         }
 
         @PostMapping("/saveServices")
@@ -61,36 +61,59 @@ public class AdminController {
                 if(bindingResult.hasErrors()){
                         model.addAttribute("result","Invalid Input");
                         model.addAttribute("errors",bindingResult.getFieldErrors());
-                        return "admin/adminService";
+                        return "admin/addadminService";
                 }
                 if(serviceDto.getImage()==null || serviceDto.getImage().isEmpty()){
                         model.addAttribute("error","Image is Empty");
-                        return "admin/adminService";
+                        return "admin/addadminService";
                 }
 
                 MultipartFile file = serviceDto.getImage();
                 long fileSize = file.getSize();
                 if(fileSize >(2*1024*1024) ){
                     model.addAttribute("fileError","File Size must not Exceed 2MB");
-                    return  "admin/adminService";
+                    return  "admin/addadminService";
                 }
 
                 String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();
 
-                String uploadDir = System.getProperty("user.dir")
-                        + "/src/main/webapp/img/services";
-
-                File dir = new File(uploadDir);
+                Path uploadPath = Paths.get(System.getProperty("user.dir"), "src", "main", "webapp", "img", "services");
+                File dir = uploadPath.toFile();
                 if (!dir.exists()) {
                     dir.mkdirs();
                 }
 
-                Path path = Paths.get(uploadDir, fileName);
-                file.transferTo(path.toFile());
+                Path path = uploadPath.resolve(fileName);
+                try {
+                    file.transferTo(path.toFile());
+                } catch (IOException e) {
+                    model.addAttribute("error", "Failed to save file: " + e.getMessage());
+                    return "admin/addadminService";
+                }
 
-                serviceService.saveService(serviceDto, fileName);
+                try {
+                    serviceService.saveService(serviceDto, fileName);
+                } catch (Exception e) {
+                    File uploadedFile = path.toFile();
+                    if (uploadedFile.exists()) {
+                        uploadedFile.delete();
+                    }
+                    model.addAttribute("error", "Database save failed: " + e.getMessage());
+                    return "admin/addadminService";
+                }
 
                 redirectAttributes.addFlashAttribute("message", "Service uploaded successfully");
                 return "redirect:/admin/saveServices";
+        }
+        @GetMapping("/readallServices")
+        public String readallServices(Model model){
+
+                model.addAttribute("services", serviceService.getAllServices());
+                return "admin/readadminServices";
+        }
+        @DeleteMapping("/deleteByIdService")
+        public String deleteByIdService(@RequestParam int id){
+                serviceService.deleteService(id);
+                return "redirect:/admin/readallServices";
         }
 }

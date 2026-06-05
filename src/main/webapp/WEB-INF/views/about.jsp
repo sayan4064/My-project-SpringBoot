@@ -42,7 +42,7 @@
                     <h2>About Me</h2>
                     <div class="page_link">
                         <a href="${pageContext.request.contextPath}/client/index">Home</a>
-                        <a href="${pageContext.request.contextPath}/client/about">About</a>
+                        <a href="${pageContext.request.contextPath}/client/about" class="active">About</a>
                     </div>
                 </div>
             </div>

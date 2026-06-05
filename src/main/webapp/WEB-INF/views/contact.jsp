@@ -45,7 +45,7 @@
                     <h2>Get In Touch</h2>
                     <div class="page_link">
                         <a href="${pageContext.request.contextPath}/client/index">Home</a>
-                        <a href="${pageContext.request.contextPath}/client/contact">Contact</a>
+                        <a href="${pageContext.request.contextPath}/client/contact" class="active">Contact</a>
                     </div>
                 </div>
             </div>

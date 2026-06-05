@@ -36,8 +36,10 @@
                 <div class="banner_content text-center">
                     <h2>Admin Dashboard</h2>
                     <div class="page_link">
-                        <a href="${pageContext.request.contextPath}/client/index">Home</a>
-                        <a href="${pageContext.request.contextPath}/admin/readallData">Dashboard</a>
+                        <a href="${pageContext.request.contextPath}/admin/home">Home</a>
+                        <a href="${pageContext.request.contextPath}/admin/readallQuery" class="active">View Queries</a>
+                        <a href="${pageContext.request.contextPath}/admin/readallServices">View Services</a>
+                        <a href="${pageContext.request.contextPath}/admin/saveServices">Add Service</a>
                     </div>
                 </div>
             </div>

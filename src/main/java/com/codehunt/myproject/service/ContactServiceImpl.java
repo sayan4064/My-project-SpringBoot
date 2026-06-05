@@ -34,6 +34,7 @@ public class ContactServiceImpl implements contactService {
 
     @Override
     public boolean existsByEmail(String email) {
+
         return contactRepository.existsByEmail(email);
     }
 
@@ -45,6 +46,7 @@ public class ContactServiceImpl implements contactService {
 
     @Override
     public void deleteContactById(int id) {
+
         contactRepository.deleteById(id);
     }
 }

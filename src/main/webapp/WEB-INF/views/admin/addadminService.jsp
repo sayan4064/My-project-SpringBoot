@@ -38,10 +38,12 @@
         <div class="banner_inner d-flex align-items-center">
             <div class="container">
                 <div class="banner_content text-center">
-                    <h2>Admin Services</h2>
+                    <h2>Admin Dashboard</h2>
                     <div class="page_link">
-                        <a href="${pageContext.request.contextPath}/client/index">Home</a>
-                        <a href="${pageContext.request.contextPath}/admin/saveServices">Upload Service</a>
+                        <a href="${pageContext.request.contextPath}/admin/home">Home</a>
+                        <a href="${pageContext.request.contextPath}/admin/readallQuery">View Queries</a>
+                        <a href="${pageContext.request.contextPath}/admin/readallServices">View Services</a>
+                        <a href="${pageContext.request.contextPath}/admin/saveServices" class="active">Add Service</a>
                     </div>
                 </div>
             </div>
