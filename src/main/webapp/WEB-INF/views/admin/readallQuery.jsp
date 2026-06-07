@@ -75,11 +75,11 @@
                                         <thead>
                                             <tr>
 
-                                                <th width="15%">Date &amp; Time</th>
-                                                <th width="18%">Name</th>
-                                                <th width="20%">Email</th>
+                                                <th width="12%">Date &amp; Time</th>
+                                                <th width="15%">Name</th>
+                                                <th width="18%">Email</th>
                                                 <th width="15%">Subject</th>
-                                                <th width="16%">Message</th>
+                                                <th width="32%">Message</th>
                                                 <th width="8%" class="text-center">Delete</th>
                                             </tr>
                                         </thead>
@@ -87,25 +87,31 @@
                                             <c:forEach items="${contacts}" var="contact">
                                                 <tr>
 
-                                                    <td>
-                                                        <c:choose>
-                                                            <c:when test="${not empty contact.datetime}">
-                                                                ${contact.datetime}
-                                                            </c:when>
-                                                            <c:otherwise>
-                                                                <span class="text-muted">N/A</span>
-                                                            </c:otherwise>
-                                                        </c:choose>
-                                                    </td>
-                                                    <td>${contact.name}</td>
-                                                    <td><a href="mailto:${contact.email}" style="color: var(--primary); font-weight: 500;">${contact.email}</a></td>
-                                                    <td><strong>${contact.subject}</strong></td>
-                                                    <td>${contact.message}</td>
-                                                    <td class="text-center">
-                                                        <button onclick="deleteContact(${contact.id})" class="btn-delete" title="Delete Inquiry">
-                                                            <i class="fa fa-trash"></i>
-                                                        </button>
-                                                    </td>
+                                                     <td>
+                                                         <c:choose>
+                                                             <c:when test="${not empty contact.datetime}">
+                                                                 <span style="white-space: nowrap; font-weight: 500;">
+                                                                     ${fn:replace(fn:substring(contact.datetime, 0, 16), 'T', ' ')}
+                                                                 </span>
+                                                             </c:when>
+                                                             <c:otherwise>
+                                                                 <span class="text-muted">N/A</span>
+                                                             </c:otherwise>
+                                                         </c:choose>
+                                                     </td>
+                                                     <td><strong>${contact.name}</strong></td>
+                                                     <td><a href="mailto:${contact.email}" style="color: var(--primary); font-weight: 500; word-break: break-all;">${contact.email}</a></td>
+                                                     <td><span style="font-weight: 600; color: var(--text-primary);">${contact.subject}</span></td>
+                                                     <td>
+                                                         <div class="message-text-wrap">
+                                                             ${contact.message}
+                                                         </div>
+                                                     </td>
+                                                     <td class="text-center">
+                                                         <button onclick="deleteContact(${contact.id})" class="btn-delete" title="Delete Inquiry">
+                                                             <i class="fa fa-trash"></i>
+                                                         </button>
+                                                     </td>
                                                 </tr>
                                             </c:forEach>
                                         </tbody>

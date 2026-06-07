@@ -134,10 +134,7 @@
 								<div class="skill-label"><span>Database (SQL / JPA)</span><span>85%</span></div>
 								<div class="skill-track"><div class="skill-fill" data-width="85"></div></div>
 							</div>
-							<div class="skill-bar">
-								<div class="skill-label"><span>Docker / Microservices</span><span>78%</span></div>
-								<div class="skill-track"><div class="skill-fill" data-width="78"></div></div>
-							</div>
+							
 						</div>
 						<a class="primary_btn" href="${pageContext.request.contextPath}/docs/resume.pdf" target="_blank" style="margin-top: 20px;"><span>Download CV</span></a>
 					</div>

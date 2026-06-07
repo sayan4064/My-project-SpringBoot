@@ -91,9 +91,24 @@ section,
   background: transparent !important;
 }
 
-/* Script Logo Style */
+/* Script Logo Style with Avatar */
+.navbar-brand.logo_h {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  text-decoration: none !important;
+}
+
 .navbar-brand.logo_h img {
-  display: none !important;
+  display: block !important;
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center top !important; /* Focuses on the face/upper part of the portrait */
+  border: 2px solid var(--primary) !important;
+  box-shadow: 0 3px 8px rgba(0, 119, 181, 0.15) !important;
+  transition: var(--transition) !important;
 }
 
 .navbar-brand.logo_h::after {
@@ -103,14 +118,20 @@ section,
   font-weight: 700 !important;
   color: var(--text-primary) !important;
   display: inline-block !important;
-  transition: var(--transition);
+  transition: var(--transition) !important;
   letter-spacing: 0.5px !important;
   vertical-align: middle !important;
 }
 
+.navbar-brand.logo_h:hover img {
+  transform: scale(1.08) rotate(5deg) !important;
+  border-color: var(--secondary) !important;
+  box-shadow: 0 5px 12px rgba(0, 160, 220, 0.35) !important;
+}
+
 .navbar-brand.logo_h:hover::after {
   color: var(--primary) !important;
-  transform: scale(1.03);
+  transform: scale(1.02) !important;
 }
 
 /* Flexbox Nav Items centering with decreased heights */
@@ -245,6 +266,7 @@ section,
 .social_icon.twitter { background: #1da1f2 !important; }
 .social_icon.facebook { background: #1877f2 !important; }
 
+/* Hero right illustration container */
 /* Hero right illustration container */
 .home_right_img {
   position: relative;
@@ -1212,8 +1234,34 @@ textarea.form-control {
   border-bottom: 1px solid var(--glass-border);
   color: var(--text-muted);
   font-size: 0.92rem;
-  vertical-align: middle;
+  vertical-align: top !important;
   background: #ffffff;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+.message-text-wrap {
+  max-height: 100px;
+  overflow-y: auto;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  padding-right: 6px;
+}
+
+/* Scrollbar inside message wrap */
+.message-text-wrap::-webkit-scrollbar {
+  width: 4px;
+}
+.message-text-wrap::-webkit-scrollbar-track {
+  background: transparent;
+}
+.message-text-wrap::-webkit-scrollbar-thumb {
+  background: var(--glass-border);
+  border-radius: 4px;
+}
+.message-text-wrap::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
 }
 
 .admin-table tbody tr:last-child td {
@@ -1326,4 +1374,31 @@ textarea.form-control {
   font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-primary);
+}
+
+/* Footer Logo Style */
+.footer_logo a {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 15px !important;
+  text-decoration: none !important;
+}
+
+.footer_logo img {
+  display: block !important;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  object-position: center top !important;
+  border: 3px solid var(--primary) !important;
+  box-shadow: 0 4px 12px rgba(0, 119, 181, 0.2) !important;
+  transition: var(--transition) !important;
+}
+
+.footer_logo:hover img {
+  transform: scale(1.08) rotate(-5deg) !important;
+  border-color: var(--secondary) !important;
+  box-shadow: 0 6px 18px rgba(0, 160, 220, 0.4) !important;
 }

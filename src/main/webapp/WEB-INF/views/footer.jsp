@@ -6,7 +6,7 @@
                     <div class="footer_top flex-column">
                         <div class="footer_logo">
                             <a href="${pageContext.request.contextPath}/client/index">
-                                <img src="img/logo.png" alt="Sayan Metya">
+                                <img src="img/sayan_logo.jpg" alt="Sayan Metya">
                             </a>
                             <h4>Connect With Me</h4>
                         </div>

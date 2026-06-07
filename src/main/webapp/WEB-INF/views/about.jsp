@@ -84,12 +84,9 @@
                                 <div class="skill-label"><span>SQL / Hibernate / JPA</span><span>88%</span></div>
                                 <div class="skill-track"><div class="skill-fill" data-width="88"></div></div>
                             </div>
+
                             <div class="skill-bar">
-                                <div class="skill-label"><span>Docker / CI/CD</span><span>80%</span></div>
-                                <div class="skill-track"><div class="skill-fill" data-width="80"></div></div>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-label"><span>Git / Version Control</span><span>92%</span></div>
+                                <div class="skill-label"><span>Git / Version Control</span><span>80%</span></div>
                                 <div class="skill-track"><div class="skill-fill" data-width="92"></div></div>
                             </div>
                         </div>
@@ -169,8 +166,7 @@
                 <div class="col-lg-3 offset-lg-1 col-md-6 animate-up delay-2">
                     <div class="client-info">
                         <div class="d-flex mb-50">
-                            <span class="lage">10+</span>
-                            <span class="smll">Coding<br>Projects<br>Built</span>
+                           <span class="smll">Focus on Projects</span>
                         </div>
                         <div class="call-now d-flex">
                             <div>

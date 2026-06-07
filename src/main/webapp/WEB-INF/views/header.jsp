@@ -4,7 +4,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
 					<!-- Brand -->
-					<a class="navbar-brand logo_h" href="${pageContext.request.contextPath}/client/index"><img src="img/logo.png" alt="Sayan Metya"></a>
+					<a class="navbar-brand logo_h" href="${pageContext.request.contextPath}/client/index"><img src="img/sayan_logo.jpg" alt="Sayan Metya"></a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
 					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 						<span class="icon-bar"></span>
