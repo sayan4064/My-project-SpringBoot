@@ -11,11 +11,11 @@
                             <h4>Connect With Me</h4>
                         </div>
                         <ul class="list">
-                            <li><a href="#" title="Facebook"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#" title="GitHub"><i class="fa fa-github"></i></a></li>
-                            <li><a href="#" title="Instagram"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/metyasayan05" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://x.com/SMetya55737" target="_blank" title="Twitter"><img src="img/x-logo.png" class="x-logo-icon" alt="X"></a></li>
+                            <li><a href="https://www.linkedin.com/in/sayan-metya-9b0bb2306/" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="https://github.com/sayan4064" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></li>
+                            <li><a href="https://www.instagram.com/s_a_y_a_n_.04/" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>

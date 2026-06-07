@@ -1402,3 +1402,35 @@ textarea.form-control {
   border-color: var(--secondary) !important;
   box-shadow: 0 6px 18px rgba(0, 160, 220, 0.4) !important;
 }
+
+/* X Logo Icon Styling */
+.x-logo-icon {
+  width: 15px !important;
+  height: 15px !important;
+  object-fit: contain !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  transition: filter 0.3s ease !important;
+  /* Match the default footer/general gray icon color (#5a738e) */
+  filter: invert(47%) sepia(19%) saturate(697%) hue-rotate(169deg) brightness(91%) contrast(91%) !important;
+}
+
+/* Hero section X icon is always white against blue background */
+.social_icon.twitter .x-logo-icon {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Global Footer X icon becomes white on circle hover */
+.footer_top .list li a:hover .x-logo-icon {
+  filter: brightness(0) invert(1) !important;
+}
+
+/* Contact page Follow Me section default gray icon color (#94a3b8) */
+.contact_info a[style*="width: 40px"] .x-logo-icon {
+  filter: invert(72%) sepia(15%) saturate(375%) hue-rotate(181deg) brightness(87%) contrast(92%) !important;
+}
+
+/* Contact page Follow Me section X icon becomes white on circle hover */
+.contact_info a[style*="width: 40px"]:hover .x-logo-icon {
+  filter: brightness(0) invert(1) !important;
+}
