@@ -16,7 +16,6 @@ Tech Stack:
 * Hibernate
 * ModelMapper
 * JSP & JSTL
-* Bootstrap
 * MySQL
 
 What I Learned ?
@@ -27,5 +26,5 @@ What I Learned ?
 * JPA & Hibernate
 * Database Connectivity
 
-Sayan Metya
+
 
